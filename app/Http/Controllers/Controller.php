@@ -11,45 +11,45 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function showMenu(){
-        if (session('user') == null){
-            return view('homepage');
+    public function auth(){
+        if (!session('user') == null){
+            return redirect('/menu');
         }
+        return view('homepage');
+    }
+
+    public function showMenu(){
+        auth();
         return view('menu');
     }
 
     public function showVaccination(){
-        if (session('user') == null){
-            return view('homepage');
-        }
+        auth();
         return view('vaccination');
     }
 
     public function ShowHealthcode(){
-        if (session('user') == null){
-            return view('homepage');
-        }
+        auth();
         return view('healthcode');
     }
 
     public function showEpidemic(){
-        if (session('user') == null){
-            return view('homepage');
-        }
+        auth();
         return view('epidemic');
     }
 
     public function showEmergency(){
-        if (session('user') == null){
-            return view('homepage');
-        }
+        auth();
         return view('emergency');
     }
 
     public function showHelp(){
-        if (session('user') == null){
-            return view('homepage');
-        }
+        auth();
         return view('help');
+    }
+
+    public function showNotifications(){
+        auth();
+        return view('notifications');
     }
 }

@@ -31,6 +31,9 @@
                             <div class="form-group mb-3">
                                 <input class="form-control" type="password" id="password" name="password" placeholder="Mot de passe" value="{{ old('password') }}">
                             </div>
+                            <div class="form-group mb-3">
+                                <input class="form-control" type="file" placeholder="Covid certificate" value="{{ old('covid_certificate') }}">
+                            </div>
                             <button class="btn btn-dark text-white mb-4 w-100" type="submit">Register</button>
                         </form>
                     </div>

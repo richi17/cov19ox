@@ -21,3 +21,4 @@ Route::get('/healthcode','App\Http\Controllers\Controller@showHealthcode');
 Route::get('/epidemic','App\Http\Controllers\Controller@showEpidemic');
 Route::get('/emergency','App\Http\Controllers\Controller@showEmergency');
 Route::get('/help','App\Http\Controllers\Controller@showHelp');
+Route::get('/notifications','App\Http\Controllers\Controller@showNotifications');

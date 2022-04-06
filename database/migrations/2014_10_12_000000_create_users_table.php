@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('phone_number')->unique();
             $table->string('password');
             $table->tinyInteger('is_vaccinated')->default(0);
+            $table->string('title')->nullable();
+            $table->string('message')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
