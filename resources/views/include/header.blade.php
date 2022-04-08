@@ -10,7 +10,7 @@
                     <li class="nav-item mx-1"><a href="/menu" class="nav-link text-dark">Home</a></li>
                     <li class="nav-item mx-1"><a href="/vaccination" class="nav-link text-dark">Vaccination</a></li>
                     <li class="nav-item mx-1"><a href="/healthcode" class="nav-link text-dark">Health code</a></li>
-                    <li class="nav-item mx-1"><a href="/epidemic" class="nav-link text-dark">Epidemic information</a></li>
+                    <li class="nav-item mx-1"><a href="/epidemic" class="nav-link text-dark">Epidemic situation</a></li>
                     <li class="nav-item mx-1"><a href="/notifications" class="nav-link text-dark">Notifications</a></li>
                     <li class="nav-item mx-1"><a href="/emergency" class="nav-link text-dark">Emergency</a></li>
                     <li class="nav-item mx-1"><a href="/help" class="nav-link text-dark">Help</a></li>
