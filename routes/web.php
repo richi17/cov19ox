@@ -23,10 +23,11 @@ Route::get('/help','App\Http\Controllers\Controller@showHelp');
 
 // Emergency
 Route::get('/emergency','App\Http\Controllers\EmergencyController@showEmergency');
-Route::get('/notificationsForm', 'App\Http\Controllers\NotificationsController@notificationsForm');
-Route::get('/deleteNotifications/{id}','App\Http\Controllers\NotificationsController@deleteNotifications');
+Route::post('/addEmergency', 'App\Http\Controllers\EmergencyController@addEmergency');
 
 // Notifications
-Route::get('/notifications','App\Http\Controllers\NotificationsController@showNotifications');
-Route::get('/notificationsForm', 'App\Http\Controllers\NotificationsController@notificationsForm');
-Route::get('/deleteNotifications/{id}','App\Http\Controllers\NotificationsController@deleteNotifications');
+Route::get('/notifications','App\Http\Controllers\NotificationController@showNotifications');
+Route::post('/addNotification', 'App\Http\Controllers\NotificationController@addNotification');
+
+// Users
+Route::get('/users','App\Http\Controllers\UserController@showUsers');
