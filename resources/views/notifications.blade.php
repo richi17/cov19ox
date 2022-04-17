@@ -9,13 +9,16 @@
                         <div class="col text-center">
                             <h1 class="mt-6 mb-5">Notifications</h1>
                             <div>
-                                @if(session('user')->title && session('user')->message)
-                                    <h5>
-                                        {{ session('user')->title }}
-                                    </h5>
-                                    <span>
-                                        {{ session('user')->message }}
-                                    </span>
+                                @if(!$notifications->isEmpty())
+                                @foreach ($notifications as $notification)
+                                    <div class="mb-3">
+                                        <h5>
+                                            {{ $notification->title }}
+                                        </h5>
+                                        <span>
+                                            {{ $notification->message }}
+                                        </span>
+                                    </div>
                                 @else
                                     <h5>
                                         No notification !

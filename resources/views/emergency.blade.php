@@ -17,6 +17,7 @@
                     <p class="mb-5">Dear customers, in order to assure the safety of everyone during this pandemic time, please be aware and contact the emergency service in your city or an ambulance in case of serious condition.</p>
                 </div>
                 <div>
+                    @if(!$contacts->isEmpty())
                     <table class="table table-bordered">
                         <thead>
                             <th>City</th>
@@ -24,85 +25,24 @@
                             <th>Center of diseases control and prevention</th>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    Beijing
-                                </td>
-                                <td>
-                                    120, 199, 4008-919191
-                                </td>
-                                <td>
-                                    010-64212461
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Shanghai
-                                </td>
-                                <td>
-                                    120
-                                </td>
-                                <td>
-                                    021-62758710
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Hangzhou
-                                </td>
-                                <td>
-                                    120, 999
-                                </td>
-                                <td>
-                                    0571-85155039
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Shenzhen
-                                </td>
-                                <td>
-                                    120
-                                </td>
-                                <td>
-                                    13603065281
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Guangzhou
-                                </td>
-                                <td>
-                                    120
-                                </td>
-                                <td>
-                                    020-83822400
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Wuhan
-                                </td>
-                                <td>
-                                    120, 85726646
-                                </td>
-                                <td>
-                                    027-85805111, 027-88872638
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Tianjin
-                                </td>
-                                <td>
-                                    120
-                                </td>
-                                <td>
-                                    022-24333453
-                                </td>
-                            </tr>
+                            @foreach ($contacts as $contact)
+                                <tr>
+                                    <td>
+                                        {{ $contact->province }}
+                                    </td>
+                                    <td>
+                                        {{ $contact->city }}
+                                    </td>
+                                    <td>
+                                        {{ $contact->number }}
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
+                    @else
+                    <span class="danger">No emergency contact !</span>
+                    @endif
                 </div>
             </div>
         </div>

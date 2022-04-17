@@ -19,6 +19,14 @@ Route::get('/menu','App\Http\Controllers\Controller@showMenu');
 Route::get('/vaccination','App\Http\Controllers\Controller@showVaccination');
 Route::get('/healthcode','App\Http\Controllers\Controller@showHealthcode');
 Route::get('/epidemic','App\Http\Controllers\Controller@showEpidemic');
-Route::get('/emergency','App\Http\Controllers\Controller@showEmergency');
 Route::get('/help','App\Http\Controllers\Controller@showHelp');
-Route::get('/notifications','App\Http\Controllers\Controller@showNotifications');
+
+// Emergency
+Route::get('/emergency','App\Http\Controllers\EmergencyController@showEmergency');
+Route::get('/notificationsForm', 'App\Http\Controllers\NotificationsController@notificationsForm');
+Route::get('/deleteNotifications/{id}','App\Http\Controllers\NotificationsController@deleteNotifications');
+
+// Notifications
+Route::get('/notifications','App\Http\Controllers\NotificationsController@showNotifications');
+Route::get('/notificationsForm', 'App\Http\Controllers\NotificationsController@notificationsForm');
+Route::get('/deleteNotifications/{id}','App\Http\Controllers\NotificationsController@deleteNotifications');

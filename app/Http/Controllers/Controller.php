@@ -38,18 +38,8 @@ class Controller extends BaseController
         return view('epidemic');
     }
 
-    public function showEmergency(){
-        auth();
-        return view('emergency');
-    }
-
     public function showHelp(){
         auth();
         return view('help');
-    }
-
-    public function showNotifications(){
-        auth();
-        return view('notifications');
     }
 }
