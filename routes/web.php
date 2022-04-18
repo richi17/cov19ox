@@ -24,6 +24,7 @@ Route::get('/help','App\Http\Controllers\Controller@showHelp');
 // Emergency
 Route::get('/emergency','App\Http\Controllers\EmergencyController@showEmergency');
 Route::post('/addEmergency', 'App\Http\Controllers\EmergencyController@addEmergency');
+Route::post('/searchEmergency', 'App\Http\Controllers\EmergencyController@searchEmergency');
 
 // Notifications
 Route::get('/notifications','App\Http\Controllers\NotificationController@showNotifications');

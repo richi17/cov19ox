@@ -17,6 +17,12 @@
                     <div>
                         <p class="mb-5">Dear customers, in order to assure the safety of everyone during this pandemic time, please be aware and contact the emergency service in your city or an ambulance in case of serious condition.</p>
                     </div>
+                    <div class="mb-3">
+                        <form method="post" action='/searchEmergency' class="form-inline my-2 my-lg-0 ml-auto" type="submit">
+                            @csrf
+                            <input class="form-control bg-white" type="search" name="searchBar" placeholder="Recherche" aria-label="Recherche">
+                        </form>
+                    </div>
                     <div>
                         @if(!$contacts->isEmpty())
                         <table class="table table-bordered">
@@ -82,6 +88,12 @@
                             </div>
                             <button class="btn btn-dark mb-4 w-100" type="submit">Add</button>
                         </form>
+                        <div class="mb-3">
+                            <form method="post" action='/searchEmergency' class="form-inline my-2 my-lg-0 ml-auto" type="submit">
+                                @csrf
+                                <input class="form-control bg-white" type="search" name="searchBar" placeholder="Recherche" aria-label="Recherche">
+                            </form>
+                        </div>
                         <div class="mt-5">
                             <h5 class="mb-3">Emergency contacts list</h5>
                             @if(!$contacts->isEmpty())

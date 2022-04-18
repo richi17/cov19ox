@@ -22,8 +22,8 @@ class EmergencyController extends Controller
         return view('emergency')->with('contacts', $contacts);
     }
 
-    public function searchEmergencyContact(){
-        $result = input('searchBar');
+    public function searchEmergency(Request $request){
+        $result = $request->input('searchBar');
         $contacts = Emergency::where('province', 'LIKE', "%{$result}%")->orWhere('city', 'LIKE', "%{$result}%")->get();
         return view('emergency')->with('contacts', $contacts);
     }
