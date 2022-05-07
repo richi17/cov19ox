@@ -16,10 +16,13 @@ Route::get('/logout','App\Http\Controllers\AuthController@logout');
 
 // Profile
 Route::get('/menu','App\Http\Controllers\Controller@showMenu');
-Route::get('/vaccination','App\Http\Controllers\Controller@showVaccination');
 Route::get('/healthcode','App\Http\Controllers\Controller@showHealthcode');
 Route::get('/epidemic','App\Http\Controllers\Controller@showEpidemic');
 Route::get('/help','App\Http\Controllers\Controller@showHelp');
+
+// Vaccination
+Route::get('/vaccination','App\Http\Controllers\VaccinationController@showVaccination');
+Route::post('/addVaccination', 'App\Http\Controllers\VaccinationController@addVaccination');
 
 // Emergency
 Route::get('/emergency','App\Http\Controllers\EmergencyController@showEmergency');

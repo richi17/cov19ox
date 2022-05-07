@@ -23,11 +23,6 @@ class Controller extends BaseController
         return view('menu');
     }
 
-    public function showVaccination(){
-        auth();
-        return view('vaccination');
-    }
-
     public function ShowHealthcode(){
         auth();
         return view('healthcode');
