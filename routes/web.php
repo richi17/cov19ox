@@ -16,7 +16,7 @@ Route::get('/logout','App\Http\Controllers\AuthController@logout');
 
 // Profile
 Route::get('/menu','App\Http\Controllers\Controller@showMenu');
-Route::get('/healthcode','App\Http\Controllers\Controller@showHealthcode');
+Route::get('/healthcode','App\Http\Controllers\HealthController@showHealth');
 Route::get('/epidemic','App\Http\Controllers\Controller@showEpidemic');
 Route::get('/help','App\Http\Controllers\Controller@showHelp');
 

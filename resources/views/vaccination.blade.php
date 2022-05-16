@@ -22,7 +22,7 @@
                                         <div class="alert alert-success text-center mt-5">{{ session('success') }}</div>
                                     @endif
                                     <div class="card-block px-lg-7 px-4 mt-5">
-                                        <h5 class="mb-3">Formulaire d'ajout</h5>
+                                        <h5 class="mb-3">Adding form</h5>
                                         <form method="post" action='/addVaccination' enctype="multipart/form-data">
                                             @csrf
                                             <div class="form-group mb-3">
