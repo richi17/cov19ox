@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Sub;
-use Illuminate\Http\Request;
-use Stevebauman\Location\Facades\Location;
+use Illuminate\Support\Facades\DB;
 
 class HealthController extends Controller
 {
@@ -19,24 +17,18 @@ class HealthController extends Controller
      {
          auth();
 
-         $riskyArea = [
+         //$riskArea = [DB::table('high_risk_area')->get('city')];
+
+         $riskArea = [
              "Shanghai",
              "Beijing",
          ];
 
-         $highRiskyArea = [
-             "Shenzen",
-             "Xihu",
-         ];
-
-         if (in_array(session('user')->city, $riskyArea)){
-             $area = 2;
-         }
-         elseif (in_array(session('user')->city, $highRiskyArea)){
-             $area = 3;
+         if (in_array(session('user')->city, $riskArea)){
+             $area = 'Danger';
          }
          else {
-             $area = 1;
+             $area = 'Safe';
          }
 
         return view ('healthcode')->with('area', $area);
