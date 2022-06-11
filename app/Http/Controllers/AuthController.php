@@ -34,7 +34,7 @@ class AuthController extends Controller
 
     public function register(){
         $_POST['password'] = Hash::make($_POST['password']);
-        $result = DB::insert('insert into users (first_name, last_name, id_number, phone_number, password) values (?, ?, ?, ?, ?)', [$_POST['first_name'], $_POST['last_name'], $_POST['id_number'], $_POST['phone_number'], $_POST['password']]);
+        $result = DB::insert('insert into users (first_name, last_name, id_number, city, phone_number, password) values (?, ?, ?, ?, ?, ?)', [$_POST['first_name'], $_POST['last_name'], $_POST['id_number'], $_POST['city'], $_POST['phone_number'], $_POST['password']]);
         if ($result){
             $connect = DB::selectOne('select * from users where phone_number = :phone_number', ['phone_number' => $_POST['phone_number']]);
             session(['user' => $connect]);

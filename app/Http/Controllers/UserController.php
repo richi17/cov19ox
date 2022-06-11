@@ -32,11 +32,11 @@ class UserController extends Controller
 
     public function adminUpdateUser(UpdateUserRequest $request, $id){
         if (session('user') == null){
-                    return view('auth');
-                }
-                if (!session('user')->is_admin){
-                    return redirect('/');
-                }
+            return view('auth');
+        }
+        if (!session('user')->is_admin){
+            return redirect('/');
+        }
         if($request->password == null){
             User::where('id', $id)->update([
                 'firstname' => $request->firstname,
@@ -57,11 +57,11 @@ class UserController extends Controller
 
     public function adminDeleteUser($id){
         if (session('user') == null){
-                    return view('auth');
-                }
-                if (!session('user')->is_admin){
-                    return redirect('/');
-                }
+            return view('auth');
+        }
+        if (!session('user')->is_admin){
+            return redirect('/');
+        }
         DB::table('users')->where('id', $id)->delete();
         return redirect('usersList');
     }

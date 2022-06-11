@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('id_number');
+            $table->string('city');
             $table->string('phone_number')->unique();
             $table->string('password');
             $table->tinyInteger('is_vaccinated')->default(0);

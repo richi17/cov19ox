@@ -35,6 +35,9 @@
                                 <input class="form-control" type="number" id="id_number" name="id_number" placeholder="Id number" value="{{ old('id_number') }}">
                             </div>
                             <div class="form-group mb-3">
+                                <input class="form-control" type="text" id="city" name="city" placeholder="City" value="{{ old('city') }}">
+                            </div>
+                            <div class="form-group mb-3">
                                 <input class="form-control" type="number" id="phone_number" name="phone_number" placeholder="Phone number" value="{{ old('phone_number') }}">
                             </div>
                             <div class="form-group mb-3">

@@ -24,7 +24,7 @@
                                     @else
                                         <span>
                                             No notification !
-                                        </h5>
+                                        </span>
                                     @endif
                                 </div>
                             </div>

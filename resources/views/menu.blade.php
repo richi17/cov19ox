@@ -8,7 +8,7 @@
                     <div class="row">
                         <div class="col text-center">
                             <h1 class="mt-6 mb-5">Welcome
-                                <span>@if(session('user')->last_name){{ session('user')->last_name }}@endif</span>
+                                <span>@if(session('user')->first_name){{ session('user')->first_name }}@endif</span>
                                 <span>@if(session('user')->last_name){{ session('user')->last_name }}@endif</span> !
                             </h1>
                         </div>
